@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cardápio de Pratos</title>
+  <style>
+   body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background-color: #4c55d9;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+    footer {
+      background-color: #4c55d9;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    .main-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+    .prato {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .prato:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+    .prato a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 24px;
+      text-decoration: none;
+      color: white;
+      background-color: #4c55d9;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    .prato a:hover {
+      background-color: #4752f7;;
+    }
+    .prato img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .prato button {
+      margin-top: 10px;
+      padding: 12px 24px;
+      border: none;
+      background-color: #4c55d9;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .prato button:hover {
+      background-color: #4752f7;
+    }
+    .prato h3 {
+      margin-bottom: 10px;
+      font-size: 1.3em;
+      color: #4c55d9;
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 480px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <h1>Cardápio de Pratos</h1>
+  <p>Delícias que agradam o seu paladar!</p>
+</header>
+
+<main class="main-content">
+  <!-- Prato 1 -->
+  <div class="prato">
+    <h3>Pizza de Pepperoni</h3>
+    <img src="https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI=" alt="Pizza de Pepperoni com borda crocante e recheio de queijo derretido, coberta com fatias generosas de pepperoni dourado e temperos frescos.">
+    <a href="https://media.istockphoto.com/id/521403691/pt/foto/quente-feito-em-casa-pizza-de-pepperoni.jpg?s=612x612&w=0&k=20&c=KWGroPbutn4ruhgedMeQ6vvPhFULRrnCMtV5coxr1AI=" aria-label="Link para a primeira imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 2 -->
+  <div class="prato">
+    <h3>Ratatouille</h3>
+    <img src="https://acozinhafrancesa.com.br/wp-content/uploads/2021/08/Ratatouille.jpg" alt="Ratatouille, um prato tradicional francês composto por camadas de legumes coloridos como abobrinha, berinjela, tomate e pimentão, cozidos com ervas aromáticas.">
+    <a href="https://acozinhafrancesa.com.br/wp-content/uploads/2021/08/Ratatouille.jpg" aria-label="Link para a segunda imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 3 -->
+  <div class="prato">
+    <h3>Sushi</h3>
+    <img src="https://umdiabetico.com.br/wp-content/uploads/2024/05/TAMANHO-FOTO-PORTAL-10-jpg.webp" alt="Sushi tradicional japonês, composto por arroz temperado coberto com fatias frescas de peixe cru, servido com alga nori, gengibre em conserva e wasabi.">
+    <a href="https://umdiabetico.com.br/wp-content/uploads/2024/05/TAMANHO-FOTO-PORTAL-10-jpg.webp" aria-label="Link para a terceira imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 4 -->
+  <div class="prato">
+    <h3>Ravioli de Trufas Brancas</h3>
+    <img src="https://harpersbazaar.uol.com.br/wp-content/uploads/2018/05/ravioli.jpg" alt="Ravioli de massa fresca recheado com trufas brancas aromáticas, servido em um molho cremoso de manteiga e ervas.">
+    <a href="https://harpersbazaar.uol.com.br/wp-content/uploads/2018/05/ravioli.jpg" aria-label="Link para a quarta imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 5 -->
+  <div class="prato">
+    <h3>Crème Brûlée</h3>
+    <img src="https://www.estadao.com.br/resizer/nk960N-V_Hlzg0iLxJdyyV-p5po=/arc-anglerfish-arc2-prod-estadao/public/MTDFNUJOIVAN5BMKB4SPSHOPEM.JPG" alt="Crème Brûlée, uma sobremesa francesa clássica com creme aveludado de baunilha, coberta com uma crosta caramelizada crocante.">
+    <a href="https://www.estadao.com.br/resizer/nk960N-V_Hlzg0iLxJdyyV-p5po=/arc-anglerfish-arc2-prod-estadao/public/MTDFNUJOIVAN5BMKB4SPSHOPEM.JPG" aria-label="Link para a quinta imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 6 -->
+  <div class="prato">
+    <h3>Tom Yum Goong</h3>
+    <img src="https://asianinspirations.com.au/wp-content/uploads/2018/07/R00067_Tom-Yum-Goong.jpg" alt="Tom Yum Goong, uma sopa tailandesa picante à base de camarão, com leite de coco, erva-cidreira, gengibre, cogumelos e um toque de pimenta.">
+    <a href="https://asianinspirations.com.au/wp-content/uploads/2018/07/R00067_Tom-Yum-Goong.jpg" aria-label="Link para a sexta imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 7 -->
+  <div class="prato">
+    <h3>Tiramisu</h3>
+    <img src="https://cloudfront-us-east-1.images.arcpublishing.com/estadao/Q3SE72ZUZRGKHOJHHW33TBLP4A.jpg" alt="Tiramisu, uma sobremesa italiana com camadas de biscoito embebido em café e licor, intercaladas com creme de mascarpone e finalizadas com cacau em pó.">
+    <a href="https://cloudfront-us-east-1.images.arcpublishing.com/estadao/Q3SE72ZUZRGKHOJHHW33TBLP4A.jpg" aria-label="Link para a sétima imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 8 -->
+  <div class="prato">
+    <h3>Pavlova</h3>
+    <img src="https://catracalivre.com.br/wp-content/uploads/2023/11/pavlova-de-frutas-vermelhas.jpg" alt="Pavlova, uma sobremesa leve de merengue crocante por fora e macio por dentro, coberta com chantilly e frutas vermelhas frescas.">
+    <a href="https://catracalivre.com.br/wp-content/uploads/2023/11/pavlova-de-frutas-vermelhas.jpg" aria-label="Link para a oitava imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+
+  <!-- Prato 9 -->
+  <div class="prato">
+    <h3>Salmão em Crosta de Amêndoas com Purê de Batata Trufado.</h3>
+    <img src="https://midias.agazeta.com.br/2023/08/11/salmao-com-crosta-de-castanhas-e-pure-de-batata-baroa-receita-do-chef-pedro-kucht-1832655.jpeg" alt="Salmão assado com crosta crocante de amêndoas, acompanhado de purê de batata trufado com toque de manteiga e ervas.">
+    <a href="https://midias.agazeta.com.br/2023/08/11/salmao-com-crosta-de-castanhas-e-pure-de-batata-baroa-receita-do-chef-pedro-kucht-1832655.jpeg" aria-label="Link para a nona imagem">Ver imagem maior</a>
+    <button onclick="lerDescricao(this)">Ouvir Descrição</button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Cardápio de Pratos - Feito por Maria Eduarda</p>
+</footer>
+
+<script>
+function lerDescricao(botao) {
+  // Interrompe qualquer fala em andamento antes de iniciar uma nova
+  window.speechSynthesis.cancel();
+
+  // Captura o texto do atributo alt da imagem dentro do mesmo div do botão clicado
+  const descricaoImagem = botao.parentElement.querySelector('img').alt;
+
+  // Função para ativar a leitura em voz alta
+  const utterance = new SpeechSynthesisUtterance(descricaoImagem);
+  utterance.lang = 'pt-BR'; // Define o idioma como português do Brasil
+  window.speechSynthesis.speak(utterance);
+}
+</script>
+
+</body>
+</html>
